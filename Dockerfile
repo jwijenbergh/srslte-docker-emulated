@@ -25,6 +25,9 @@ RUN apt-get update \
 
 WORKDIR /srsran
 
+# Generate images for uhd
+RUN /usr/lib/uhd/utils/uhd_images_downloader.py
+
 # Pinned git commit used for this example
 ARG COMMIT=5275f33360f1b3f1ee8d1c4d9ae951ac7c4ecd4e
 
